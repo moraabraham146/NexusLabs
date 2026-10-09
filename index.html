@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NexusLabs - Hospital</title>
+    <meta name="description" content="NexusLabs - Atención médica profesional con tecnología de punta.">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#0d6efd">
+    <meta name="api-base" content="http://localhost:4000">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#home">
+          <img src="assets/img/logo.svg" alt="Logotipo de NexusLabs" width="36" class="me-2">
+          <strong>NexusLabs</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#departments">Departamentos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#team">Equipo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+            
+            <li class="nav-item ms-2 ms-lg-3 d-flex align-items-center gap-2">
+              <a id="dashboardBtn" class="btn btn-outline-primary btn-sm" href="dashboard.html">Dashboard</a>
+              
+              <div id="userActions" class="d-flex gap-2 align-items-center">
+                <button id="loginTrigger" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar sesión</button>
+                <button id="registerTrigger" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#registerModal">Registrarse</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header id="home" class="hero d-flex align-items-center" style="min-height:90vh;">
+      <div class="container text-white">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold anim anim-fade-up">Atención de salud centrada en la persona</h1>
+            <p class="lead anim anim-fade-up delay-1">NexusLabs combina tecnología y experiencia clínica para cuidados integrales y fiables.</p>
+            <a href="#contact" class="btn btn-primary btn-lg anim anim-scale delay-2">Pide una cita</a>
+          </div>
+          <div class="col-lg-6 text-center d-none d-lg-block">
+            <img src="assets/img/hero-illustration.svg" alt="Ilustración de atención médica y tecnología" class="img-fluid anim anim-fade-up delay-3" style="max-height:380px;">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="mt-5" role="main">
+      <section id="services" class="py-5">
+        <div class="container">
+          <div class="text-center mb-4">
+            <h2 id="servicesLabel" class="fw-bold anim anim-fade-up">Nuestros Servicios</h2>
+            <p class="text-muted anim anim-fade-up delay-1">Atención primaria, urgencias, laboratorio y telemedicina.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm anim anim-fade-up delay-2">
+                <div class="card-body text-center">
+                  <div class="display-6 text-primary mb-3"><i class="bi bi-heart-pulse"></i></div>
+                  <h5 class="card-title">Urgencias 24/7</h5>
+                  <p class="card-text text-muted">Atención rápida con personal especializado y equipamiento avanzado.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm anim anim-fade-up delay-3">
+                <div class="card-body text-center">
+                  <div class="display-6 text-success mb-3"><i class="bi bi-flask"></i></div>
+                  <h5 class="card-title">Laboratorio clínico</h5>
+                  <p class="card-text text-muted">Resultados confiables y rapidez en la entrega de informes.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm anim anim-fade-up delay-4">
+                <div class="card-body text-center">
+                  <div class="display-6 text-warning mb-3"><i class="bi bi-people"></i></div>
+                  <h5 class="card-title">Telemedicina</h5>
+                  <p class="card-text text-muted">Consultas remotas para mayor seguridad y comodidad.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="departments" class="py-5 bg-light">
+        <div class="container">
+          <h2 class="fw-bold text-center anim anim-fade-up">Departamentos</h2>
+          <div class="row g-4 mt-3">
+            <div class="col-md-4 anim anim-fade-up delay-2">
+              <div class="p-4 bg-white rounded shadow-sm h-100">
+                <h5>Medicina General</h5>
+                <p class="text-muted">Diagnóstico y tratamiento de enfermedades en general.</p>
+              </div>
+            </div>
+            <div class="col-md-4 anim anim-fade-up delay-3">
+              <div class="p-4 bg-white rounded shadow-sm h-100">
+                <h5>Pediatría</h5>
+                <p class="text-muted">Cuidados infantiles con enfoque en crecimiento y prevención.</p>
+              </div>
+            </div>
+            <div class="col-md-4 anim anim-fade-up delay-4">
+              <div class="p-4 bg-white rounded shadow-sm h-100">
+                <h5>Radiología</h5>
+                <p class="text-muted">Imágenes de alta resolución para diagnósticos precisos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="py-5">
+        <div class="container">
+          <h2 class="fw-bold text-center anim anim-fade-up">Nuestro Equipo</h2>
+          <div class="row g-4 mt-4">
+            <div class="col-md-4 anim anim-fade-up delay-2 text-center">
+              <div class="card border-0 shadow-sm h-100 text-center">
+                <div class="card-body">
+                  <img src="assets/img/doctor-placeholder.svg" alt="Dr. Abraham Mora" class="rounded-circle mb-3" width="96">
+                  <h6 class="mb-0">Dr. Abraham Mora</h6>
+                  <small class="text-muted">Medicina General</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 anim anim-fade-up delay-3 text-center">
+              <div class="card border-0 shadow-sm h-100 text-center">
+                <div class="card-body">
+                  <img src="assets/img/doctor-placeholder.svg" alt="Dr. Pepito Perez" class="rounded-circle mb-3" width="96">
+                  <h6 class="mb-0">Dr. Pepito Perez</h6>
+                  <small class="text-muted">Pediatra</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 anim anim-fade-up delay-4 text-center">
+              <div class="card border-0 shadow-sm h-100 text-center">
+                <div class="card-body">
+                  <img src="assets/img/doctor-placeholder.svg" alt="Dra. Sofia López" class="rounded-circle mb-3" width="96">
+                  <h6 class="mb-0">Dra. Sofia López</h6>
+                  <small class="text-muted">Radióloga</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-5 bg-primary text-white">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6 anim anim-fade-up">
+              <h3 class="fw-bold">Contáctanos</h3>
+              <p>Agenda tu cita o consulta nuestras líneas de atención.</p>
+              <ul class="list-unstyled">
+                <li><i class="bi bi-telephone-fill"></i> +58 (555) 123-456</li>
+                <li><i class="bi bi-envelope-fill"></i> contacto@nexuslabs.com</li>
+              </ul>
+            </div>
+            <div class="col-md-6 anim anim-fade-up delay-2">
+              <form id="contactForm" class="bg-white p-4 rounded text-dark shadow-sm">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Nombre</label>
+                  <input type="text" id="name" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Correo electrónico</label>
+                  <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Mensaje</label>
+                  <textarea id="message" class="form-control" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0 pb-0">
+            <h5 class="modal-title">Iniciar sesión</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body pt-0">
+            <form id="loginForm" novalidate>
+              <div class="mb-3">
+                <label for="loginUsername" class="form-label">Nombre de usuario</label>
+                <input type="text" class="form-control" id="loginUsername" required minlength="3">
+                <div class="invalid-feedback">Introduce tu nombre de usuario.</div>
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="loginPassword" required minlength="6">
+                <div class="invalid-feedback">La contraseña debe tener al menos 6 caracteres.</div>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="loginRemember">
+                <label class="form-check-label" for="loginRemember">Recuérdame</label>
+              </div>
+              <div id="loginFeedback" class="mb-3 text-danger" style="display:none;"></div>
+              <button type="submit" class="btn btn-primary w-100">Entrar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0 pb-0">
+            <h5 class="modal-title">Crear cuenta</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body pt-0">
+            <form id="registerForm" novalidate>
+              <div class="mb-3">
+                <label for="registerFirstName" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="registerFirstName" required>
+              </div>
+              <div class="mb-3">
+                <label for="registerLastName" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="registerLastName" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="registerGender" class="form-label">Sexo</label>
+                <select id="registerGender" class="form-select" required>
+                  <option value="">Selecciona...</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="femenino">Femenino</option>
+                  <option value="otro">Otro</option>
+                </select>
+                <div class="invalid-feedback">Selecciona tu sexo.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="registerUsername" class="form-label">Nombre de usuario</label>
+                <input type="text" class="form-control" id="registerUsername" required minlength="3">
+              </div>
+              <div class="mb-3">
+                <label for="registerCedula" class="form-label">Número de cédula</label>
+                <input type="text" class="form-control" id="registerCedula" pattern="\d{6,12}" required>
+              </div>
+              <div class="mb-3">
+                <label for="registerPhone" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="registerPhone" required>
+              </div>
+              <div class="mb-3">
+                <label for="registerBirth" class="form-label">Fecha de nacimiento</label>
+                <input type="date" class="form-control" id="registerBirth" required>
+              </div>
+              <div class="mb-3">
+                <label for="registerEmail" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="registerEmail" required>
+              </div>
+              <div class="mb-3 d-none" id="specialtyField">
+                <label for="registerSpecialty" class="form-label">Especialidad (si eres doctor)</label>
+                <input type="text" class="form-control" id="registerSpecialty">
+              </div>
+              <div class="mb-3">
+                <label for="registerRole" class="form-label">Rol</label>
+                <select id="registerRole" class="form-select" required>
+                  <option value="">Selecciona...</option>
+                  <option value="paciente">Paciente</option>
+                  <option value="doctor">Doctor</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="registerPassword" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="registerPassword" required minlength="6">
+              </div>
+              <div class="mb-3">
+                <label for="registerConfirm" class="form-label">Confirmar contraseña</label>
+                <input type="password" class="form-control" id="registerConfirm" required minlength="6">
+              </div>
+              <div id="registerFeedback" class="mb-3 text-danger" style="display:none;"></div>
+              <button type="submit" class="btn btn-primary w-100">Crear cuenta</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="py-4 bg-dark text-white">
+      <div class="container text-center small">
+        © 2026 NexusLabs. Todos los derechos reservados. Desarrollado por Abraham Mora.
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
